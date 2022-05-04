@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(mBinding.root)
         APP_ACTIVITY = this
         initFirebase()
+        //elv[
         initUser {
             CoroutineScope(Dispatchers.IO).launch {
                 initContacts()
