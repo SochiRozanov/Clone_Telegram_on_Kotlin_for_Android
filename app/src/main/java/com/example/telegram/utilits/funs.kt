@@ -9,7 +9,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.telegram.MainActivity
+import com.example.telegram.Chat_Activity
 import com.example.telegram.R
 import com.example.telegram.database.updatePhonesToDatabase
 import com.example.telegram.models.CommonModel
@@ -27,7 +27,7 @@ fun showToast(message: String) {
 
 fun restartActivity() {
     /* Функция расширения для AppCompatActivity, позволяет запускать активити */
-    val intent = Intent(APP_ACTIVITY, MainActivity::class.java)
+    val intent = Intent(APP_ACTIVITY, Chat_Activity::class.java)
     APP_ACTIVITY.startActivity(intent)
     APP_ACTIVITY.finish()
 }
@@ -64,7 +64,7 @@ fun ImageView.downloadAndSetImage(url: String) {
     Picasso.get()
         .load(url)
         .fit()
-        .placeholder(R.drawable.default_photo)
+        .placeholder(R.drawable.default_photo_red)
         .into(this)
 }
 

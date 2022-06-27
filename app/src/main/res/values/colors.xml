@@ -2,12 +2,12 @@
 <resources>
 //Определяем цвет верхнего поля
     <color name="colorPrimary2">#0088CC</color>
-    <color name="colorPrimary">#6D6F70</color>
+    <color name="colorPrimary">#000000</color>
 // Определяем цвет статус бара
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorPrimaryDark2">#0052CC</color>
 // Определяем цвет заднего фона
-    <color name="colorAccent">#494949</color>
+    <color name="colorAccent">#222222</color>
     <color name="colorAccent2">#FFFFFF</color>
 
     <color name="colorAccentDark">#D1CDCD</color>
@@ -16,7 +16,7 @@
 
     <color name="colorGreen">#89D17D</color>
 
-    <color name="colorGreenDark">#4E8345</color>
+    <color name="colorGreenDark">#15410D</color>
 
     <color name="colorGrey">#837E7E</color>
 

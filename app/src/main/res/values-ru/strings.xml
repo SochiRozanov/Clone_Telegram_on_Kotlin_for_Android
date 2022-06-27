@@ -30,6 +30,12 @@
     <string name="clear_chat">Очистить чат</string>
     <string name="delete_chat">Удалить чат</string>
     <string name="create_group">Создать группу</string>
+    //Нижние меню
+    <string name="bottom_menu_icon_1">Главная</string>
+    <string name="bottom_menu_icon_2">Списки</string>
+    <string name="bottom_menu_icon_3">Добавить</string>
+    <string name="bottom_menu_icon_4">Связь</string>
+    <string name="bottom_menu_icon_5">Кабинет</string>
 
     <plurals name="count_members">
         <item quantity="one">%d участник</item>

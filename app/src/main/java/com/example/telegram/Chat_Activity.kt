@@ -2,6 +2,7 @@ package com.example.telegram
 
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
@@ -18,21 +19,43 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 
-
-
 /* Главная активность*/
 
-class MainActivity : AppCompatActivity() {
+class Chat_Activity : AppCompatActivity() {
 
     private lateinit var mBinding: ActivityMainBinding
     lateinit var mAppDrawer: AppDrawer
     lateinit var mToolbar: Toolbar
+    lateinit var bottom_binding:ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         /* Функция запускается один раз, при создании активити */
         super.onCreate(savedInstanceState)
         mBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
+        mBinding.bNav.selectedItemId = R.id.btn_Main_Menu_4
+        mBinding.bNav.setOnNavigationItemReselectedListener {
+        when(it.itemId){
+            R.id.btn_Main_Menu_1-> {
+                Toast.makeText(this,"Переход на главную",Toast.LENGTH_LONG).show()
+            }
+            R.id.btn_Main_Menu_2-> {
+                Toast.makeText(this,"Переход на списки",Toast.LENGTH_LONG).show()
+            }
+            R.id.btn_Main_Menu_3-> {
+                Toast.makeText(this,"Переход на добавить",Toast.LENGTH_LONG).show()
+            }
+            R.id.btn_Main_Menu_4-> {
+                Toast.makeText(this,"Переход на связь",Toast.LENGTH_LONG).show()
+            }
+            R.id.btn_Main_Menu_5-> {
+                Toast.makeText(this,"Переход в кабинет",Toast.LENGTH_LONG).show()
+            }
+        }
+        }
+
         APP_ACTIVITY = this
+
+
         initFirebase()
         //elv[
         initUser {
@@ -41,10 +64,11 @@ class MainActivity : AppCompatActivity() {
             }
             initFields()
             initFunc()
-        }
 
+        }
     }
-//
+
+    //
     private fun initFunc() {
         /* Функция инициализирует функциональность приложения */
         setSupportActionBar(mToolbar)
@@ -52,7 +76,7 @@ class MainActivity : AppCompatActivity() {
             mAppDrawer.create()
             replaceFragment(MainListFragment(), false)
         } else {
-            replaceFragment(EnterPhoneNumberFragment(),false)
+            replaceFragment(EnterPhoneNumberFragment(), false)
         }
     }
 
@@ -78,7 +102,11 @@ class MainActivity : AppCompatActivity() {
         grantResults: IntArray
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (ContextCompat.checkSelfPermission(APP_ACTIVITY, READ_CONTACTS)==PackageManager.PERMISSION_GRANTED){
+        if (ContextCompat.checkSelfPermission(
+                APP_ACTIVITY,
+                READ_CONTACTS
+            ) == PackageManager.PERMISSION_GRANTED
+        ) {
             initContacts()
         }
     }

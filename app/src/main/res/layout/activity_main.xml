@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Chat_Activity">
     //Верхний бар
 
     <androidx.appcompat.widget.Toolbar
@@ -27,10 +27,30 @@
         android:id="@+id/data_container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@drawable/background2"
+        android:background="@drawable/background"
+        app:layout_constraintBottom_toTopOf="@+id/bNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_toolbar_top">
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bNav"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@color/colorBlack"
+        app:itemIconTint="@drawable/battom_nav_selector"
+        app:itemRippleColor="#F4F4F4"
+        app:itemTextColor="@color/md_white_1000"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/main_toolbar_top" />
+        app:menu="@menu/botton_main_menu">
+
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

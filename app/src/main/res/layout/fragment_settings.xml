@@ -20,7 +20,7 @@
             android:layout_width="@dimen/settings_user_photo_width"
             android:layout_height="@dimen/settings_user_photo_height"
             android:layout_marginStart="@dimen/app_margin"
-            android:src="@drawable/default_photo"
+            android:src="@drawable/default_photo_red"
             app:civ_circle_background_color="@color/colorAccent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -160,25 +160,5 @@
         app:layout_constraintBottom_toBottomOf="@+id/settings_header_bloc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/settings_header_bloc" />
-
-    <ImageView
-        android:id="@+id/ivCroppedImage2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:src="@tools:sample/avatars" />
-
-    <Button
-        android:id="@+id/btnChooseImage2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/settings_btn_change_bio" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

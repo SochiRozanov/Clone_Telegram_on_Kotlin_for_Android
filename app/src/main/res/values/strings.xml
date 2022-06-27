@@ -37,4 +37,9 @@
         <item quantity="many">%d участников</item>
         <item quantity="other">%d участников</item>
     </plurals>
+    <string name="bottom_menu_icon_1">Главная</string>
+    <string name="bottom_menu_icon_2">Списки</string>
+    <string name="bottom_menu_icon_3">Добавить</string>
+    <string name="bottom_menu_icon_4">Связь</string>
+    <string name="bottom_menu_icon_5">Кабинет</string>
 </resources>

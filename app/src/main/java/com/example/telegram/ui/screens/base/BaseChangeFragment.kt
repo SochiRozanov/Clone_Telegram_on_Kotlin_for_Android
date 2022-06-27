@@ -4,7 +4,7 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import androidx.fragment.app.Fragment
-import com.example.telegram.MainActivity
+import com.example.telegram.Chat_Activity
 import com.example.telegram.R
 import com.example.telegram.utilits.hideKeyboard
 
@@ -16,7 +16,7 @@ open class BaseChangeFragment (layout:Int): Fragment(layout) {
     override fun onStart() {
         super.onStart()
         setHasOptionsMenu(true)
-        (activity as MainActivity).mAppDrawer.disableDrawer()
+        (activity as Chat_Activity).mAppDrawer.disableDrawer()
         hideKeyboard()
     }
 
@@ -26,7 +26,7 @@ open class BaseChangeFragment (layout:Int): Fragment(layout) {
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         /* Создание выпадающего меню*/
-        (activity as MainActivity).menuInflater.inflate(R.menu.settings_menu_confirm, menu)
+        (activity as Chat_Activity).menuInflater.inflate(R.menu.settings_menu_confirm, menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
