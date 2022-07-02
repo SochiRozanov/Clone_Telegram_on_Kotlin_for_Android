@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/btn_Main_Menu_1"
+        android:icon="@drawable/ic_btn_first"
+        android:title="@string/bottom_menu_icon_1"
+        android:orderInCategory="1"
+
+        />
+    <item android:id="@+id/btn_Main_Menu_2"
+        android:icon="@drawable/ic_btn_list"
+        android:title="@string/bottom_menu_icon_2"
+        android:orderInCategory="2"
+        />
+    <item android:id="@+id/btn_Main_Menu_3"
+        android:icon="@drawable/ic_btn_add"
+        android:title="@string/bottom_menu_icon_3"
+        android:orderInCategory="3"
+        />
+    <item android:id="@+id/btn_Main_Menu_4"
+        android:icon="@drawable/ic_btn_chat"
+        android:title="@string/bottom_menu_icon_4"
+        android:orderInCategory="4"
+        />
+    <item android:id="@+id/btn_Main_Menu_5"
+        android:icon="@drawable/ic_btn_account"
+        android:title="@string/bottom_menu_icon_5"
+        android:orderInCategory="5"
+        />
+
+</menu>
