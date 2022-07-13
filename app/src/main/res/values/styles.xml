@@ -90,5 +90,9 @@
         <item name="android:inputType">phone</item>
     </style>
 
+    <style name="FullScreenDialogTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="android:fitsSystemWindows">false</item>
+    </style>
 
 </resources>
