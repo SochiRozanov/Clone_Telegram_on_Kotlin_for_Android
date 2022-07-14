@@ -42,4 +42,5 @@
     <string name="bottom_menu_icon_3">Добавить</string>
     <string name="bottom_menu_icon_4">Связь</string>
     <string name="bottom_menu_icon_5">Кабинет</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>

@@ -12,15 +12,11 @@ import kotlinx.android.synthetic.main.fragment_enter_phone_number.*
 import java.util.concurrent.TimeUnit
 
 /* Фрагмент для ввода номера телефона при регистрации */
-
 class EnterPhoneNumberFragment : Fragment(R.layout.fragment_enter_phone_number) {
-
     private lateinit var mPhoneNumber: String
     private lateinit var mCallback: PhoneAuthProvider.OnVerificationStateChangedCallbacks
-
     override fun onStart() {
         super.onStart()
-
         /* Callback который возвращает результат верификации */
         mCallback = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
             override fun onVerificationCompleted(credential: PhoneAuthCredential) {
